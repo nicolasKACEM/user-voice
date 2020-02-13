@@ -9,9 +9,11 @@ import { AjouterIdeeComponent } from './ajouter-idee/ajouter-idee.component';
 import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+
+
 @NgModule({
   imports:      [ NgbModule, BrowserModule, FormsModule ],
-  declarations: [ AppComponent, AjouterIdeeComponent, LoginComponent, SidebarComponent ],
+  declarations: [ AppComponent, AjouterIdeeComponent, LoginComponent, SidebarComponent,  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
