@@ -7,5 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class LoginComponent  {
 
+  onSubmit(form: NgForm) {
+    console.log(form.value);
+}
 
 }

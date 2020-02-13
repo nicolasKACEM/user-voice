@@ -1,7 +1,23 @@
-<div id ="login" class="input-group">
-    <form action="" >
-      <input type ="text"  placeholder="Pseudo"/>
-      <input type ="submit" class="btn btn-primary" value="se connecter">
-    </form>
+<div class="jumbotron text-center">
+  <h1>Bienvenu sur User Voice</h1>
+
 </div>
-<p>dfdfdfdf</p>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+     
+    </div>
+    <div class="col-sm-6 form-group">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+       <input type ="text" class="form-control" placeholder="Pseudo"/>
+        <a routerLink="ajouter-idee" ><button class="btn btn-primary" type="submit">Se connecter</button></a>
+      </form>
+    </div>
+    <div class="col-sm-3">
+      
+    </div>
+  </div>
+</div>
