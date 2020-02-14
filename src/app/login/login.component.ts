@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { User } from '../models/User.model';
 
 @Component({
   selector: 'app-login',
@@ -7,8 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class LoginComponent  {
 
-  onSubmit(form: NgForm) {
-    console.log(form.value);
-}
+  user: User; 
+
+ clicSurBouton(){
+   console.log("restsfe");
+ }
 
 }
