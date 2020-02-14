@@ -15,10 +15,10 @@ export class LoginComponent implements OnInit {
   formulaireLogin :FormGroup;
   user: User; 
   listeUser: ListeUser;
-  userService : UsersService;
-  
 
-  constructor(private formBuilder: FormBuilder, router : Router){
+  constructor(private formBuilder: FormBuilder, 
+  private router : Router,
+  private userService : UsersService){
 
   }
   ngOnInit(){

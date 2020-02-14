@@ -10,10 +10,11 @@ import {UsersService} from  '../Service/users.service';
 export class AjouterIdeeComponent implements OnInit {
 
   @Input() user: User
-  constructor( userService: UsersService) { }
+  constructor( private userService: UsersService) { }
 
   ngOnInit() {
-    console.log(this.user.pseudo)
+
+    console.log("ici :" + this.userService.getUser());
   }
 
 }
