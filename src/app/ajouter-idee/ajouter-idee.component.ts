@@ -1,6 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { User } from '../model/User.model';
 import {UsersService} from  '../Service/users.service';
+import {MessagesService} from  '../Service/messages.service';
 
 @Component({
   selector: 'app-ajouter-idee',
@@ -14,7 +15,6 @@ export class AjouterIdeeComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log("ici :" + this.userService.getUser());
   }
 
 }

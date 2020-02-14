@@ -11,6 +11,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule, Routes } from '@angular/router';
 import {ReactiveFormsModule } from '@angular/forms';
 import { UsersService } from './Service/users.service';
+import { ListeMessageComponent } from './liste-message/liste-message.component';
+import { MessagesService } from './Service/messages.service';
 
 
 const appRoutes: Routes = [
@@ -21,9 +23,9 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:      [ NgbModule, BrowserModule, FormsModule, RouterModule.forRoot(appRoutes),ReactiveFormsModule],
-  declarations: [ AppComponent, AjouterIdeeComponent, LoginComponent, SidebarComponent,  ],
+  declarations: [ AppComponent, AjouterIdeeComponent, LoginComponent, SidebarComponent, ListeMessageComponent,  ],
   bootstrap:    [ AppComponent ],
-  providers: [UsersService],
+  providers: [UsersService, MessagesService],
  
 })
 export class AppModule { }

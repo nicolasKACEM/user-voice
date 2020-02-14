@@ -35,8 +35,6 @@ initForm() {
    console.log(formValue['pseudo']);
    this.user = new User(formValue['pseudo']);
     this.userService.setUser(this.user);
-
-    this.router.navigate(['ajouter-idee']);
  }
 
 }
