@@ -4,15 +4,14 @@
 </div>
 
 
-
 <div class="container">
   <div class="row">
     <div class="col-sm-3">
      
     </div>
     <div class="col-sm-6 form-group">
-      <form>
-       <input type ="text" class="form-control" placeholder="Pseudo"/>
+      <form [formGroup]="formulaireLogin">
+       <input type ="text" class="form-control" placeholder="Pseudo" formControlName="pseudo"/>
         <a routerLink="ajouter-idee" ><button class="btn btn-primary" type="submit" (click)="clicSurBouton()">Se connecter</button></a>
       </form>
     </div>

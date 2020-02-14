@@ -9,6 +9,7 @@ import { AjouterIdeeComponent } from './ajouter-idee/ajouter-idee.component';
 import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule, Routes } from '@angular/router';
+import {ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports:      [ NgbModule, BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  imports:      [ NgbModule, BrowserModule, FormsModule, RouterModule.forRoot(appRoutes),ReactiveFormsModule],
   declarations: [ AppComponent, AjouterIdeeComponent, LoginComponent, SidebarComponent,  ],
   bootstrap:    [ AppComponent ]
 })
