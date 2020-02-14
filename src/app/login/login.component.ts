@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from '../models/User.model';
+import { User } from '../model/User.model';
 import { FormGroup,FormBuilder } from '@angular/forms';
+import { ListeUser } from '../model/ListeUser.model';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,8 @@ export class LoginComponent implements OnInit {
 
   formulaireLogin :FormGroup;
   user: User; 
+  listeUser: ListeUser;
+
   constructor(private formBuilder: FormBuilder){
 
   }
@@ -25,7 +28,8 @@ initForm() {
 
  clicSurBouton(){
    const formValue = this.formulaireLogin.value;
-   console.log(formValue['pseudo'])
+   console.log(formValue['pseudo']);
+   this.user = new User(formValue['pseudo']);
  }
 
 }
