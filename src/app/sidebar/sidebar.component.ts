@@ -32,8 +32,10 @@ export class SidebarComponent implements OnInit {
 
   ajoutMessage(){
     const formValue = this.formulaireIdee.value;
-    console.log(formValue['message'] )
-    this.messages.addMessage(formValue['message'])
-  }
+    console.log(formValue['message'] );
+    console.log(this.messages.getMessages()[0]);
+    this.messages.addMessage(formValue['message']);
+     console.log(this.messages.getMessages()[1])
+   }
 
 }
