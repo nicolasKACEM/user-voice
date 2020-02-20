@@ -10,29 +10,30 @@ import { FormGroup,FormBuilder } from '@angular/forms';
 })
 export class SidebarComponent implements OnInit {
 
-  formulaireIdee :FormGroup;
+  formulaireIdee : FormGroup;
   constructor( private formBuilder: FormBuilder,
     private userService: UsersService,
   private messages : MessagesService
-  ) { }
+  ) {}
   userName :string;
   ngOnInit() {
 
      console.log("ici :" + this.userService.getUser().pseudo);
      this.userName=this.userService.getUser().pseudo;
+     this.initForm();
   }
 
   initForm() {
     this.formulaireIdee = this.formBuilder.group({
-      message: '',
+      message:'',
     });
 
   }
 
   ajoutMessage(){
     const formValue = this.formulaireIdee.value;
-    this.messages.ajoutMessage(formValue['message'])
-    console.log(formValue['message'])
+    console.log(formValue['message'] )
+    this.messages.addMessage(formValue['message'])
   }
 
 }

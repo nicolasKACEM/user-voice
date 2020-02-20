@@ -13,7 +13,11 @@ export class MessagesService {
 
   addMessage(message : String){
 
-    this.messages[this.messages.length]=message 
+    if(this.messages!=null)
+      this.messages[this.messages.length]=message;
+    else{
+       this.messages[0]=message;
+    } 
   }
 
 }
