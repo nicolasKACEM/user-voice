@@ -13,6 +13,7 @@ export class ListeMessageComponent implements OnInit {
 
   ngOnInit() {
 
+if(!this.messageService.getMessages()) return;
     for(let i=0;i<this.messageService.getMessages().length;i++){
       console.log(this.messageService.getMessages()[i])
     }

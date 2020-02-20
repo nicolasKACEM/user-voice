@@ -5,8 +5,9 @@
   <br>
   <br>
 
-  <form>
+  <form [formGroup]="formulaireIdee">
   <label>Message</label>
-  <input type="text"/>
+  <input type="text" formControlName="message"/>
+  <input type="submit" value="envoyer" (click)="ajoutMessage()"/>
   </form>
 </div>
