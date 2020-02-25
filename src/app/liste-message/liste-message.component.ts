@@ -27,5 +27,9 @@ export class ListeMessageComponent implements OnInit {
   minNote(message:Message){
     message.note--;
 }
+supprimer(message:Message){
+  if(message.auteur == this.user.pseudo )
+ this.messageService.messages.splice(this.messageService.messages.indexOf(message), 1);
+}
 
 }
