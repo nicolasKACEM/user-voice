@@ -13,9 +13,9 @@
            <td>{{message.id}}</td>
            <td>{{user.pseudo}}</td>
            <td>{{message.message}}</td>
-           <td><button onclick="addNote()">+</button></td>
-           <td><button onclick="minNote()">-</button></td>
-           <td>0</td>
+           <td><button (click)="addNote(message)">+</button></td>
+           <td><button (click)="minNote(message)">-</button></td>
+           <td>{{message.note}}</td>
            </tr>
        
      </ng-container>

@@ -18,10 +18,14 @@ export class ListeMessageComponent implements OnInit {
   ngOnInit() {
     this.messages=this.messageService.getMessages();
     this.user=this.userService.getUser();
-if(!this.messageService.getMessages()) return;
-    for(let i=0;i<this.messageService.getMessages().length;i++){
-      console.log("dans la liste"+this.messageService.getMessages()[i])
-    }
+
   }
+  addNote(message:Message){
+
+    message.note++;
+}
+  minNote(message:Message){
+    message.note--;
+}
 
 }
