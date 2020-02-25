@@ -1,16 +1,21 @@
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
+       <th scope="col">id</th>
       <th scope="col">Auteur</th>
       <th scope="col">Message</th>
+      <th scope="col">Vote+</th>
+      <th scope="col">Vote-</th>
       <th scope="col">Note</th>
-      <th scope="col">Vote</th>
     </tr>
     <ng-container *ngFor="let message of messages">
          <tr>
-           <td>{{message}}</td>
-           <td>{{message}}</td>
+           <td>{{message.id}}</td>
+           <td>{{user.pseudo}}</td>
+           <td>{{message.message}}</td>
+           <td><button onclick="addNote()">+</button></td>
+           <td><button onclick="minNote()">-</button></td>
+           <td>0</td>
            </tr>
        
      </ng-container>

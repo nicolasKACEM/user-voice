@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import {UsersService} from  '../Service/users.service';
 import {MessagesService} from  '../Service/messages.service';
 import { FormGroup,FormBuilder } from '@angular/forms';
+import {Message} from  '../model/message';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
+  
 })
 export class SidebarComponent implements OnInit {
 
@@ -33,9 +35,9 @@ export class SidebarComponent implements OnInit {
   ajoutMessage(){
     const formValue = this.formulaireIdee.value;
     console.log(formValue['message'] );
-    console.log(this.messages.getMessages()[0]);
-    this.messages.addMessage(formValue['message']);
-     console.log(this.messages.getMessages()[1])
+    
+    this.messages.addMessage(new Message(formValue['message'],this.messages. getMessages().length));
+     
    }
 
 }
