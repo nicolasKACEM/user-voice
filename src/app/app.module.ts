@@ -13,11 +13,14 @@ import {ReactiveFormsModule } from '@angular/forms';
 import { UsersService } from './Service/users.service';
 import { ListeMessageComponent } from './liste-message/liste-message.component';
 import { MessagesService } from './Service/messages.service';
+import { IsSignedInGuardGuard } from './Service/is-signed-in-guard.guard';
 
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'ajouter-idee', component: AjouterIdeeComponent },
+  { path: 'ajouter-idee', component: AjouterIdeeComponent,canActivate: [
+            IsSignedInGuardGuard
+        ] },
   { path: '', component: LoginComponent }
 ];
 
@@ -25,7 +28,7 @@ const appRoutes: Routes = [
   imports:      [ NgbModule, BrowserModule, FormsModule, RouterModule.forRoot(appRoutes),ReactiveFormsModule],
   declarations: [ AppComponent, AjouterIdeeComponent, LoginComponent, SidebarComponent, ListeMessageComponent,  ],
   bootstrap:    [ AppComponent ],
-  providers: [UsersService, MessagesService],
+  providers: [UsersService, MessagesService, IsSignedInGuardGuard],
  
 })
 export class AppModule { }

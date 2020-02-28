@@ -1,5 +1,5 @@
-<table class="table">
-  <thead class="thead-dark">
+<table class="table ">
+  <thead class="table-striped table-dark">
     <tr>
        <th scope="col">id</th>
       <th scope="col">Auteur</th>
@@ -14,10 +14,10 @@
            <td>{{message.id}}</td>
            <td>{{message.auteur}}</td>
            <td>{{message.message}}</td>
-           <td><button (click)="addNote(message)">+</button></td>
-           <td><button (click)="minNote(message)">-</button></td>
+           <td><button (click)="addNote(message)">👍</button></td>
+           <td><button (click)="minNote(message)">👎</button></td>
            <td>{{message.note}}</td>
-           <td><button (click)="supprimer(message)">x</button></td>
+           <td><button (click)="supprimer(message)">❌</button></td>
            </tr>
        
      </ng-container>
